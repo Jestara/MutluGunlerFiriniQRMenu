@@ -1,0 +1,107 @@
+<div >
+
+
+
+  <!-- Menu Categories Start -->
+  <!-- <div class="ct-menu-categories menu-filter" *ngIf="status" >
+    <div class="container">
+      <div class="menu-category-slider">
+
+        <a  data-filter="*" class="ct-menu-category-item active" *ngFor="let c of category" >
+          <div class="menu-category-thumb" >
+             <img [src]=" 'https://' + c.imageUrl" style="width: 100%;height: 100%;"  >
+              <img src="">
+          </div>
+          <div class="menu-category-desc">
+            <h6>{{c.name}}</h6>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div> -->
+
+  <div class="ct-menu-categories">
+    <div class="container" >
+      <div class="menu-category-slider "  >
+          <a (click)="selectCategory(c)" class="ct-menu-category-item" *ngFor="let c of category" [ngStyle]="{'opacity': c.id === selectedCategoryId ? '1' : '.4'}">
+          <div class="menu-category-thumb" >
+            <img [src]=" 'https://' + c.imageUrl" style="width: 100%;height: 100%;object-fit: cover;"  alt="Mutlu Gunler Firini" >
+          </div>
+          <div class="menu-category-desc">
+            <h6>{{c.name}}</h6>
+          </div>
+
+       </a>
+
+      </div>
+      </div>
+
+  </div>
+
+  <!-- Menu Categories End -->
+
+  <!-- Menu Wrapper Start -->
+
+
+        <!-- Product Start -->
+        <!-- <div class="col-lg-4 col-md-6 " *ngFor="let product of selectedCategoryProducts">
+          <div class="product">
+            <a class="product-thumb" routerLink='/menu-item-v1'>
+
+              <img [src]=" 'https://' + product.imageUrl" alt="menu item" />
+            </a>
+            <div class="product-body">
+              <div class="product-desc">
+                <h4> <a routerLink='/menu-item-v1'>Pepperoni</a> </h4>
+                <p>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc</p>
+                <p class="product-price">12.99$</p>
+                <div class="favorite">
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <div class="product-controls">
+                <a href="#" class="order-item btn-custom btn-sm shadow-none">Order <i class="fas fa-shopping-cart"></i> </a>
+                <a href="#" class="btn-custom secondary btn-sm shadow-none" data-toggle="modal" data-target="#customizeModal"> Customize <i class="fas fa-plus"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+
+        <div class="section section-padding menu-v2">
+
+     <div class="container">
+      <div class="row">
+        <mat-spinner *ngIf="!status" strokeWidth="2" ></mat-spinner>
+        <div class="col-lg-4 col-md-6" *ngFor="let p of selectedCategoryProducts">
+        <div class="product boxShadow">
+           <img src="https://{{p.imageUrl}}" style="border-radius: 5px;width: 100%;" class="boxShadow" alt="Mutlu Günler Fırını"/>
+
+           <br>
+          <div class="product-body">
+            <div class="product-desc">
+              <h4><a>{{p.name}}</a></h4>
+            </div>
+            <div class="product-controls">
+              <a href="javascript:void(0)" class="order-item btn-custom btn-sm shadow-none boxShadow">{{p.price}} ₺ </a>
+              <mat-icon matTooltip="{{p.description}}" style="font-size: 30px;color: red;"
+                        matTooltipPosition="above">info
+              </mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     </div>
+
+         </div>
+
+  <!-- Menu Wrapper End -->
+<!-- <app-footer></app-footer> -->
+
+
+
+
+
+</div>
