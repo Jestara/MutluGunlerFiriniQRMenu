@@ -24,8 +24,8 @@
   <div class="ct-menu-categories">
     <div class="container" >
       <div class="menu-category-slider "  >
-          <a (click)="selectCategory(c)" class="ct-menu-category-item" *ngFor="let c of category" [ngStyle]="{'opacity': c.id === selectedCategoryId ? '1' : '.4'}">
-          <div class="menu-category-thumb" >
+          <a (click)="selectCategory(c)" class="ct-menu-category-item" *ngFor="let c of category" [ngStyle]="{'opacity': c.id === selectedCategoryId ? '1' : '.4' }">
+          <div class="menu-category-thumb" [ngStyle]="{'border-color': c.id === selectedCategoryId ? '#fff' : '' }">
             <img [src]=" 'https://' + c.imageUrl" style="width: 100%;height: 100%;object-fit: cover;"  alt="Mutlu Gunler Firini" >
           </div>
           <div class="menu-category-desc">

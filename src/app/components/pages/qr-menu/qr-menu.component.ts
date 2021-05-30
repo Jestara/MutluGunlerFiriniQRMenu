@@ -24,7 +24,7 @@ export class QrMenuComponent implements OnInit {
     this.route.paramMap.subscribe((data) => {
       const id = data.get('id');
       this.menuService.getCategory(id).then((data) => {
-        console.log(data);
+
         this.category = data;
         this.selectedCategoryProducts = this.category[0].products;
         this.selectedCategoryId = this.category[0].id;
@@ -46,7 +46,10 @@ export class QrMenuComponent implements OnInit {
   selectCategory(category: any){
     this.selectedCategoryProducts = category.products;
     this.selectedCategoryId = category.id;
+
   }
+
+
 
   // goTo(c: any){
   //   var section = c.toString();

@@ -4177,7 +4177,7 @@ td.quantity{
 /* 8.7. Menu Pages */
 .ct-menu-categories{
   display: flex;
-  background-color: #ED4E53;
+  background-color: #212121;
   padding: 20px;
   overflow-x:hidden ;
 
@@ -4189,7 +4189,7 @@ td.quantity{
 
 }
 .ct-menu-category-item h6{
-  color: #fff;
+  color: #f9a825;
   margin: 0;
 }
 .menu-category-thumb{
